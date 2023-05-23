@@ -1,7 +1,7 @@
 meta:
-  title: Redocly Training
-  description: The best API documentation generator ever.
-  siteUrl: https://developer-portal-starter.redoc.ly
+  title: FusionSpa Specification
+  description: API documentation for FusionSpa.
+  siteUrl: https://developer-portal-starter.fusion.id
   keywords: redocly developer portal, api portal starter, api reference docs
   lang: en-US
 linkChecker:
@@ -9,7 +9,7 @@ linkChecker:
   options:
     CheckExternal: false
 logo:
-  image: ./images/logo.png
+  image: ./images/logo-text.svg
   altText: Redocly Training
 toc:
   enable: true
@@ -17,8 +17,8 @@ oasDefinitions:
   petstore: ./openapi/petstore.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
 stylesheets:
-  - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
-  - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
+  - https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap
+  - https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap
 #analytics:
   # ga:
   # note that GA doesn't work in the development environment
@@ -27,29 +27,29 @@ stylesheets:
 #  - ./static/intercom.js
 nav:
 
-  - label: Training exercises
-    page: developer-portal/index.md
+  - label: Документация FusionPos
+    page: docs/index.md
 
-  - label: External docs
-    icon: ./images/redocly-icon-white.png
-    href: https://redoc.ly/docs/developer-portal/introduction/
+  # - label: External docs
+  #  icon: ./images/redocly-icon-white.png
+  #  href: https://redoc.ly/docs/developer-portal/introduction/
 
   - search: true
 
 footer:
-  copyrightText: Copyright © Redocly 2019-2021. All right reserved.
-  columns:
-    - group: Legal
-      items:
-        - label: Terms of Use
-          href: 'https://redoc.ly/subscription-agreement/'
-        - label: Privacy Notice
-          href: 'https://redoc.ly/privacy-notice/'
-        - label: Cookie Notice
-          href: 'https://redoc.ly/cookie-notice/'
-    - group: Support
-      items:
-        - label: FAQ
-          page: faq.md
-        - label: Contact us
-          page: contact.mdx
+  copyrightText: Copyright © FusionSpa 2023. All right reserved.
+#  columns:
+#    - group: Legal
+#      items:
+#        - label: Terms of Use
+#          href: 'https://redoc.ly/subscription-agreement/'
+#        - label: Privacy Notice
+#          href: 'https://redoc.ly/privacy-notice/'
+#        - label: Cookie Notice
+#          href: 'https://redoc.ly/cookie-notice/'
+#    - group: Support
+#      items:
+#        - label: FAQ
+#          page: faq.md
+#        - label: Contact us
+#          page: contact.mdx

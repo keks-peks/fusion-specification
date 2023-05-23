@@ -15,7 +15,7 @@ export const theme = {
   colors: {
     // tonalOffset: 0.2,
     primary: {
-      main: '#227a88',
+      main: '#1a1a27',
       // light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       // dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       // contrastText: ({ colors }) => readableColor(colors.primary.main),
@@ -93,8 +93,9 @@ export const theme = {
   },
 
   sidebar: {
-    backgroundColor: '#fafafa',
+    backgroundColor: '#181c32',
     width: '260px',
+    textColor: '#fff',
   },
   // tocPanel: {
   //   width: '240px',
@@ -154,8 +155,8 @@ export const theme = {
     },
     links: {
       color: ({ colors }) => colors.primary.main,
-      visited: ({ typography }) => typography.links.color,
-      hover: ({ typography }) => lighten(0.2, typography.links.color),
+     // visited: ({ typography }) => typography.links.color,
+     // hover: ({ typography }) => lighten(0.2, typography.links.color),
     },
   },
   rightPanel: {
@@ -164,7 +165,7 @@ export const theme = {
     // textColor: '#ffffff',
   },
   schema: {
-    nestedBackground: '#fafafa',
+    nestedBackground: '#1b1b28',
     // linesColor: theme => lighten( theme.colors.tonalOffset, desaturate(theme.colors.tonalOffset, theme.colors.primary.main) ),
     // defaultDetailsWidth: '75%',
     // typeNameColor: theme => theme.colors.text.secondary,

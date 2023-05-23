@@ -22,7 +22,7 @@ Find this section of the theme file.
   colors: {
     // tonalOffset: 0.2,
     primary: {
-      main: '#227a88',
+      main: '#1a1a27',
       // light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       // dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       // contrastText: ({ colors }) => readableColor(colors.primary.main),
@@ -53,7 +53,7 @@ Or change any other colors you want.
 
 ```ts
     footer: {
-      main: '#424242',
+      main: '#1a1a27',
       // main: ({ colors }) => colors.primary.main,
       contrastText: 'white'
     },

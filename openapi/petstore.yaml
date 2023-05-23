@@ -1,34 +1,73 @@
 openapi: 3.0.3
 servers:
-  - url: '//petstore.swagger.io/v2'
+#  - url: '//localhost:8080'
+#  - url: 'https://localhost:8080'
+  - url: 'https://spa.fusionpos.ru'
+#  - url: 'https://cors.redoc.ly/spa.fusionpos.ru'
+#  - url: 'https://cors.redoc.ly/localhost:8080'
+#  - url: 'http://cors.redoc.ly/localhost:8080'
+#  - url: 'http://localhost:3333'
 info:
   description: >-
-    This is a sample server Petstore server.  You can find out more about
+    HELLO. You can find out more about
     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net,
     #swagger](http://swagger.io/irc/).  For this sample, you can use the api key
     `special-key` to test the authorization filters.
   version: 1.0.0
-  title: Swagger Petstore
-  termsOfService: 'http://swagger.io/terms/'
+  title: Общая информация
+  termsOfService: 'https://fusionpos.ru/help'
   contact:
-    email: apiteam@swagger.io
+    email: info@fusionpos.ru
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 tags:
-  - name: pet
-    description: Everything about your Pets
+  - name: /api/v2/roles
+    description: Everything about your roles
     externalDocs:
       description: Find out more
       url: 'http://swagger.io'
-  - name: store
-    description: Access to Petstore orders
-  - name: user
+  - name: /api/v2/orders
+    description: Access to FusionSpa orders
+  - name: /api/v2/user
     description: Operations about user
     externalDocs:
       description: Find out more about our store
       url: 'http://swagger.io'
+  - name: FusionSpa
+    description: Access to FusionSpa other stuf
 paths:
+  /api/v2/auth:
+    post:
+      tags:
+        - /api/v2/auth
+      summary: /api/v2/auth
+      description: 'Получение JWT токена для авторизации'
+      operationId: AuthController_login
+      responses:
+        '201':
+          description: 'JWT token:'
+          content:
+            JWT token:
+              schema:
+                type: object
+          headers:
+            Pagination-Count:
+              description: 'JWT format'
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  description: 'default: fboard'
+                  type: string
+                password:
+                  description: 'default: fboard'
+                  type: string
   /pet:
     post:
       tags:
@@ -47,27 +86,7 @@ paths:
             - 'read:pets'
       requestBody:
         $ref: '#/components/requestBodies/Pet'
-    put:
-      tags:
-        - pet
-      summary: Update an existing pet
-      description: ''
-      operationId: updatePet
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Pet not found
-        '405':
-          description: Validation exception
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-      requestBody:
-        $ref: '#/components/requestBodies/Pet'
+
   /pet/findByStatus:
     get:
       tags:
